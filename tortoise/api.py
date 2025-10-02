@@ -9,19 +9,19 @@ import torch.nn.functional as F
 import progressbar
 import torchaudio
 
-from tortoise.models.classifier import AudioMiniEncoderWithClassifierHead
-from tortoise.models.diffusion_decoder import DiffusionTts
-from tortoise.models.autoregressive import UnifiedVoice
+from models.classifier import AudioMiniEncoderWithClassifierHead # remove tortoise.
+from models.diffusion_decoder import DiffusionTts # remove tortoise.
+from models.autoregressive import UnifiedVoice # remove tortoise.
 from tqdm import tqdm
-from tortoise.models.arch_util import TorchMelSpectrogram
-from tortoise.models.clvp import CLVP
-from tortoise.models.cvvp import CVVP
-from tortoise.models.random_latent_generator import RandomLatentConverter
-from tortoise.models.vocoder import UnivNetGenerator
-from tortoise.utils.audio import wav_to_univnet_mel, denormalize_tacotron_mel, TacotronSTFT
-from tortoise.utils.diffusion import SpacedDiffusion, space_timesteps, get_named_beta_schedule
-from tortoise.utils.tokenizer import VoiceBpeTokenizer
-from tortoise.utils.wav2vec_alignment import Wav2VecAlignment
+from models.arch_util import TorchMelSpectrogram # remove tortoise.
+from models.clvp import CLVP # remove tortoise.
+from models.cvvp import CVVP # remove tortoise.
+from models.random_latent_generator import RandomLatentConverter # remove tortoise.
+from models.vocoder import UnivNetGenerator # remove tortoise.
+from utils.audio import wav_to_univnet_mel, denormalize_tacotron_mel, TacotronSTFT # remove tortoise.
+from utils.diffusion import SpacedDiffusion, space_timesteps, get_named_beta_schedule # remove tortoise.
+from utils.tokenizer import VoiceBpeTokenizer # remove tortoise.
+from utils.wav2vec_alignment import Wav2VecAlignment # remove tortoise.
 from contextlib import contextmanager
 from huggingface_hub import hf_hub_download
 pbar = None
